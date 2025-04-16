@@ -49,8 +49,17 @@ public class User {
     public void setUserId(String userId) {
         this.userId = userId;
     }
+    public void printTickets(){
+        for(int i=0;i<ticketsBooked.size();i++){
+            System.out.println(ticketsBooked.get(i).getTicketInfo());
+        }
+    }
 
-
-
-
+    public User(String userId, String name, List<Ticket> ticketsBooked, String password, String hashedPassword) {
+        this.userId = userId;
+        this.name = name;
+        this.ticketsBooked = ticketsBooked;
+        this.password = password;
+        this.hashedPassword = hashedPassword;
+    }
 }
